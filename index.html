@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
+
+<body>
+    <div class="form-container sign-up-form">
+        <div class="imgBox sign-up-imgBox">
+            <div class="sliding-link">
+                <p>Already a member?</p>
+                <span class="sign-in-btn">Sign in</span>
+            </div>
+            <img src="images/login.webp" height="200" width="200" alt="Login Image" />
+        </div>
+        <div class="form-box sign-up-box">
+            <h2>Sign up</h2>
+            <div class="login-options">
+                <div class="other-logins">
+                    <a href="#"><img src="images/google.png" alt="Google Login" /></a>
+                    <a href="#"><img src="images/facebook.png" alt="Facebook Login" /></a>
+                    <a href="#"><img src="images/twitter.png" alt="Twitter Login" /></a>
+                </div>
+                <p class="text">Or, Sign up with email</p>
+            </div>
+            <form action="#">
+                <div class="field">
+                    <i class="uil uil-at"></i>
+                    <input type="email" placeholder="Email ID" required />
+                </div>
+                <div class="field">
+                    <i class="uil uil-user"></i>
+                    <input type="text" placeholder="Full Name" required />
+                </div>
+                <div class="field">
+                    <i class="uil uil-lock-alt"></i>
+                    <input type="password" placeholder="Password" required />
+                </div>
+                <div class="field">
+                    <i class="uil uil-lock-access"></i>
+                    <input type="password" id="confirm-password" placeholder="Confirm password" required />
+                </div>
+                <div id="password-error" class="error-message"></div>
+                <input class="submit-btn" type="submit" value="Sign up" />
+            </form>
+        </div>
+    </div>
+    <div class="form-container sign-in-form">
+        <div class="form-box sign-in-box">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="field">
+                    <i class="uil uil-at"></i>
+                    <input type="email" placeholder="Email ID" required />
+                </div>
+                <div class="field">
+                    <i class="uil uil-lock-alt"></i>
+                    <input class="password-input" type="password" placeholder="Password" required />
+                    <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <input class="submit-btn" type="submit" value="Login" />
+            </form>
+            <div class="login-options">
+                <p class="text">Or, login with ...</p>
+                <div class="other-logins">
+                    <a href="#"><img src="images/google.png" alt="Google Login" /></a>
+                    <a href="#"><img src="images/facebook.png" alt="Facebook Login" /></a>
+                    <a href="#"><img src="images/twitter.png" alt="Twitter Login" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="imgBox sign-in-imgBox">
+            <div class="sliding-link">
+                <p>Don't have an account?</p>
+                <span class="sign-up-btn">Sign up</span>
+            </div>
+            <img src="images/signup.svg" height="200" width="200" alt="Signup Image" />
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
