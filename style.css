@@ -1,278 +1,351 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --background-color: #f8eeee;
+  --primary-color: #0066ff;
+  --hover-color: #009400;
+  --muted-text-color: #828da0;
+  --white-color: #fff;
+  --box-shadow-color: rgb(0 0 0 / 15%);
+  --error-color: red;
+  --medium-strength-color: orange;
+  --strong-strength-color: green;
+  --light-border-color: #eee;
+  --password-strength-bg: #e0e0e0;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(images/background.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+  min-height: 100vh;
+  background: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  padding-bottom: 15px;
+  text-align: justify;
 }
 
 .form-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
 }
 
 .form-box {
-    z-index: 999;
-    background: #fff;
-    box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
-    width: 350px;
-    padding: 50px 40px;
-    border-radius: 5px;
-    overflow: hidden;
+  z-index: 999;
+  background: var(--white-color);
+  box-shadow: 0 5px 25px var(--box-shadow-color);
+  width: 450px;
+  padding: 50px 40px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .form-box h2 {
-    font-size: 2em;
-    margin-bottom: 40px;
-    font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .form-box .field {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid #eee;
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--light-border-color);
+  margin-bottom: 25px;
+  position: relative;
 }
 
 .form-box .field.active {
-    border-bottom: 2px solid #0065ff;
-    transition: 0.3s ease;
+  border-bottom: 2px solid var(--primary-color);
+  transition: 0.3s ease;
 }
 
 .form-box .field input {
-    border: none;
-    outline: none;
-    background: none;
-    width: 100%;
-    font-size: 1em;
-    padding-bottom: 5px;
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  font-size: 1em;
+  padding-bottom: 5px;
 }
 
 .form-box .field i {
-    color: #828da0;
-    font-size: 1.3em;
-    margin-right: 10px;
-    padding-bottom: 5px;
+  color: var(--muted-text-color);
+  font-size: 1.3em;
+  margin-right: 10px;
+  padding-bottom: 5px;
 }
 
 .form-box .field.active i {
-    color: #0065ff;
-    transition: 0.3s ease;
+  color: var(--primary-color);
+  transition: 0.3s ease;
 }
 
 ::placeholder {
-    color: #828da0;
-    font-size: 0.85em;
+  color: var(--muted-text-color);
+  font-size: 0.85em;
 }
 
 .eye-btn {
-    cursor: pointer;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .eye-btn i:hover {
-    color: #0065ff;
-    transition: 0.3s ease;
+  color: var(--primary-color);
+  transition: 0.3s ease;
 }
 
 .forgot-link {
-    text-align: right;
-    transform: translateY(-10px);
+  text-align: right;
+  transform: translateY(-10px);
 }
 
 .forgot-link a {
-    color: #0065ff;
-    font-size: 0.8em;
-    text-decoration: none;
-    font-weight: 500;
+  color: var(--primary-color);
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .submit-btn {
-    background: #0065ff;
-    color: #fff;
-    border: none;
-    outline: none;
-    width: 120px;
-    padding: 10px 30px;
-    border-radius: 5px;
-    font-size: 0.85em;
-    font-weight: 500;
-    margin-top: 5px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-weight: 500;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.submit-btn:hover {
+  background-color: var(--hover-color);
+  transition: background-color 0.3s ease;
 }
 
 .login-options {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .login-options .text {
-    color: #828da0;
-    font-size: 0.80em;
-    margin: 25px 0;
+  color: var(--muted-text-color);
+  font-size: 0.8em;
+  margin: 25px 0;
 }
 
 .other-logins {
-    display: flex;
+  display: flex;
 }
 
 .other-logins a {
-    border: 1px solid #ccc;
-    padding: 11px 32px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
+  border: 1px solid #ccc;
+  padding: 11px 32px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
 }
 
 .other-logins a:hover {
-    border: 1px solid #0065ff;
+  border: 1px solid var(--primary-color);
 }
 
 .other-logins a img {
-    width: 20px;
+  width: 20px;
 }
 
 .imgBox img {
-    max-width: 270px;
+  max-width: 270px;
 }
 
 .sliding-link {
-    display: flex;
-    font-size: 0.80em;
-    margin-bottom: 25px;
+  display: flex;
+  font-size: 0.8em;
+  margin-bottom: 25px;
 }
 
 .sliding-link span {
-    color: #0065ff;
-    font-weight: 600;
-    margin-left: 5px;
-    cursor: pointer;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 .imgBox {
-    z-index: 888;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #fff;
-    box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
-    height: 400px;
-    padding: 15px 35px;
+  z-index: 888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--white-color);
+  box-shadow: 0 5px 25px var(--box-shadow-color);
+  height: 400px;
+  padding: 15px 35px;
 }
 
 .sign-in-imgBox {
-    border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
 }
 
 .sign-up-imgBox {
-    border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
 }
 
 .sign-in-form.hide .sign-in-box {
-    transform: translateX(100%);
-    visibility: hidden;
+  transform: translateX(100%);
+  visibility: hidden;
 }
 
 .sign-in-form.hide .sign-in-imgBox {
-    transform: translateX(-100%);
-    visibility: hidden;
+  transform: translateX(-100%);
+  visibility: hidden;
 }
 
 .sign-in-form.show .sign-in-box,
 .sign-in-form.show .sign-in-imgBox {
-    transform: translateX(0);
-    visibility: visible;
-    transition: 0.5s ease;
+  transform: translateX(0);
+  visibility: visible;
+  transition: 0.5s ease;
 }
 
 .sign-up-form .sign-up-imgBox {
-    transform: translateX(100%);
-    visibility: hidden;
+  transform: translateX(100%);
+  visibility: hidden;
 }
 
 .sign-up-form .sign-up-box {
-    transform: translateX(-100%);
-    visibility: hidden;
+  transform: translateX(-100%);
+  visibility: hidden;
 }
 
 .sign-up-form.show .sign-up-imgBox,
 .sign-up-form.show .sign-up-box {
-    transform: translateX(0);
-    visibility: visible;
-    transition: 0.5s ease;
+  transform: translateX(0);
+  visibility: visible;
+  transition: 0.5s ease;
 }
 
 .error-message {
-    color: red;
-    font-size: 0.8em;
-    text-align: center;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    display: none;
+  color: var(--error-color);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  display: none;
+  padding: 5px;
+  background-color: #ffcccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Password Strength Meter */
+.password-strength {
+  height: 5px;
+  margin-top: 5px;
+  width: 100%;
+  background-color: var(--password-strength-bg);
+  border-radius: 2px;
+}
+
+.password-strength.weak {
+  background-color: var(--error-color);
+  width: 30%;
+}
+
+.password-strength.medium {
+  background-color: var(--medium-strength-color);
+  width: 60%;
+}
+
+.password-strength.strong {
+  background-color: var(--strong-strength-color);
+  width: 100%;
+}
+
+.status-text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.status-text.match {
+  color: var(--strong-strength-color);
+}
+
+.status-text.no-match {
+  color: var(--error-color);
 }
 
 @media screen and (max-width: 735px) {
-    .form-container {
-        flex-direction: column;
-        top: 0;
-        overflow: hidden;
-        padding: 30px;
-    }
+  .form-container {
+    flex-direction: column;
+    top: 0;
+    overflow: hidden;
+    padding: 30px;
+  }
 
-    .form-box {
-        box-shadow: none;
-        padding: 0;
-    }
+  .form-box {
+    box-shadow: none;
+    padding: 50px 40px;
+  }
 
-    .imgBox img {
-        max-width: 45%;
-        min-width: 180px;
-    }
+  .imgBox img {
+    max-width: 45%;
+    min-width: 180px;
+  }
 
-    .imgBox {
-        box-shadow: none;
-        width: 100%;
-        height: auto;
-        padding: 35px 35px 15px;
-    }
+  .imgBox {
+    box-shadow: none;
+    width: 100%;
+    height: auto;
+    padding: 35px 35px 15px;
+  }
 
-    .sign-up-form {
-        flex-direction: column-reverse;
-    }
+  .sign-up-form {
+    flex-direction: column-reverse;
+  }
 }
 
 @media screen and (max-width: 450px) {
-    .form-container {
-        font-size: 0.9rem;
-    }
+  .form-container {
+    font-size: 0.9rem;
+    padding: 50px 40px;
+  }
 
-    .form-box {
-        width: 100%;
-    }
+  .form-box {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 325px) {
-    .other-logins a {
-        padding: 9px 25px;
-        margin: 0 3px;
-    }
+  .other-logins a {
+    padding: 9px 25px;
+    margin: 0 3px;
+  }
+}
+
+.form-box img {
+  display: block;
+  margin: 10px auto 10px auto;
 }

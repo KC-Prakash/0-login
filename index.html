@@ -16,7 +16,7 @@
                 <p>Already a member?</p>
                 <span class="sign-in-btn">Sign in</span>
             </div>
-            <img src="images/login.webp" height="200" width="200" alt="Login Image" />
+            <img src="images/login.svg" height="300" width="300" alt="Login Image" />
         </div>
         <div class="form-box sign-up-box">
             <h2>Sign up</h2>
@@ -39,13 +39,19 @@
                 </div>
                 <div class="field">
                     <i class="uil uil-lock-alt"></i>
-                    <input type="password" placeholder="Password" required />
+                    <input class="password-input" id="password" type="password" placeholder="Password" required />
+                    <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
                 </div>
+
                 <div class="field">
                     <i class="uil uil-lock-access"></i>
-                    <input type="password" id="confirm-password" placeholder="Confirm password" required />
+                    <input class="password-input" id="confirm-password" type="password" placeholder="Confirm Password"
+                        required />
+                    <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
                 </div>
+                <div id="password-strength" class="password-strength"></div>
                 <div id="password-error" class="error-message"></div>
+
                 <input class="submit-btn" type="submit" value="Sign up" />
             </form>
         </div>
@@ -64,7 +70,7 @@
                     <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
                 </div>
                 <div class="forgot-link">
-                    <a href="#">Forgot password?</a>
+                    <a href="request-reset-form.html">Forgot password?</a>
                 </div>
                 <input class="submit-btn" type="submit" value="Login" />
             </form>
@@ -82,7 +88,7 @@
                 <p>Don't have an account?</p>
                 <span class="sign-up-btn">Sign up</span>
             </div>
-            <img src="images/signup.svg" height="200" width="200" alt="Signup Image" />
+            <img src="images/signup.svg" height="300" width="300" alt="Signup Image" />
         </div>
     </div>
     <script src="script.js"></script>
